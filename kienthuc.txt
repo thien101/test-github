@@ -1,0 +1,120 @@
+account sudo
+name hoangthien
+pass 1008
+
+Các lênh linux cơ bản
+	-ls :hiển thị ra tất cả cách file trong thư mục trỏ đến
+	
+	-cd :di chuyển đến các thư mục bên trong
+	
+	-clear: clear terminal
+
+	-mkdir: tạo 1 thử mục tại điểm trỏ đến
+	(mkdir -p new1/new2/new3: tạo cách thư mục con)
+
+	-rmdir: xoá forder tại điểm trỏ đến
+	(rm -r: xoá cả thư mục con)
+	
+	-touch: tạo file tại điểm trỏ đến
+	(touch new1/test.txt)
+	
+	-vim(vi): editor
+	(
+	 |:q | exit vim
+	 |:w | save
+	 |nhấn i | soạn thảo vi
+	 |:qw | save and exit
+	 |:p! | exit and no save				
+	)
+	
+	-cat: cắt nội dung trong và hiển thị
+	(
+	cat file1 file2: nối nội dung file 1 vs file 2 rồi hiển thị
+	cat file1 file2 > file3: nối nội dung file 1 và file 2 rồi đưa vào file 3
+	)
+
+	-echo: hiển thị mội nội dung file
+	(
+	echo "OK file" >> file1: đưa nội dụng vào file1
+	echo "Test Test" >> file1: nếu trung file thì thêm nội vào
+	)
+
+	-tail: lấy ra những cuối nhất của file
+
+	-grep: tìm kiếm trong file
+	(
+	cat kienthuc.txt | grep vim	
+	)
+
+	-cp: lệnh copy
+	(cp file1 file2 -> copy trong cùng thư mục, nếu trùng tên sẽ thây đổ nội dung file sau)
+	(cp file1 mnt/d/forder1 -> copy file đến thư cần lưu)
+	(cp /mnt/d/forder1/file - /mnt/d/forder2 -> copy file đến forder 2)
+
+	-mv: move(di chuyển) dùng như cp
+	(dùng để đổi tên
+	mv file1 file2 -> đổi tên file1 thành file 2
+	mv file1 forder/fil2 -> di chuyển đến forder và đổi tên
+	với forder dùng in chang file)
+
+	-rm: xoá file
+	(rm file1 file2 ... xoá nhiều file
+	 rm -r forder có thể xoá cả file va thư mục đó)
+
+	---------------------------------------------------------------------
+	-chmod: phân quyền
+		3 nhóm:
+		-user(owner): chủ sở hửu
+		-group: nhóm
+		-orther: còn lại
+		3 quyền:
+		-read(r): đọc
+		-write(w): ghi
+		-execute(x): thực thi
+			theo kiểu bát phân: 4: read, 2: write, 1: execute, 0: no quyền
+	(
+	set quyền:
+	sudo chmod u=rwx,g=rx,o=r tên file(kiểu kí tự)
+	sudo chmod 7(rwx = 4+2+1)5(rx = 4+0+1)4(r=4+0+0) tên file(kiểu bát phân)
+	)
+
+	-chown: quyền sử hữu
+	(sudo chown root:root tenfile
+	 sudo chown root:hoangthien tenfile
+	 sudo chown :root file -> phân quyền cho group
+	 sudo chown root file -> phân quyền cho owner)
+
+	-man: dùng để tra cứu các lệnh trên linux
+	(man tên lệnh)
+
+	-apt: dùng để update và upgrade, install, remove --> lên google search apt command in ubuntu
+	(sudo apt install node)
+
+	-wget: dùng để tải file
+	(wget link file)
+
+	-kill: tắt hoạt động của file
+	(kill tên file)->> tín hiệu 15 tắt từ từ 
+	(kill -9 file)->> tín hiệu -9 tắt ngay tại thời điểm đấy
+
+	-ping: kiểm tra tốc độ đến máy chủ or một máy chủ còn chạy hay ko
+	(ping google.com)
+
+	-uname: xem thông tin tên của hệ điều hành
+	(uname)
+
+	-passwd: thay đổi mk hiện tại của hệ điều hành
+	(passwd)
+
+	-top: kiểm tra program trên hệ thông
+	(top or htop)
+
+	-df: kiểm tra ổ cứng đã sử dụng
+	(df or df -h)
+
+	-free: kiểm tra ram
+	(free or free -h)
+
+	ctrl +a/ctrl +e: di chuyển con trỏ về trc/cuối câu lệnh
+
+	
